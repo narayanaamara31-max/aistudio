@@ -1,0 +1,118 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+
+@Component({
+  selector: 'app-how-it-works',
+  standalone: true,
+  imports: [CommonModule, MatIconModule],
+  template: `
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h1 class="text-5xl font-black text-brand-black mb-6">How It Works</h1>
+          <p class="text-xl text-gray-600">Ordering custom prints has never been easier. No login required!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+          <!-- Connector Line (Desktop) -->
+          <div class="hidden md:block absolute top-24 left-0 w-full h-1 bg-brand-orange/20 -z-10"></div>
+
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-brand-orange text-white rounded-full flex items-center justify-center text-3xl font-black shadow-xl mb-8 relative">
+              1
+              <div class="absolute -bottom-2 -right-2 bg-white p-2 rounded-full shadow-md">
+                <mat-icon class="text-brand-orange">chat</mat-icon>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Send Your Design</h3>
+            <p class="text-gray-600">
+              Message us on WhatsApp with your design idea or image. Tell us the quantity and product you want.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-brand-orange text-white rounded-full flex items-center justify-center text-3xl font-black shadow-xl mb-8 relative">
+              2
+              <div class="absolute -bottom-2 -right-2 bg-white p-2 rounded-full shadow-md">
+                <mat-icon class="text-brand-orange">visibility</mat-icon>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Approve Preview</h3>
+            <p class="text-gray-600">
+              Our team will send you a digital mockup of how your design will look. Once you approve, we start printing!
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-brand-orange text-white rounded-full flex items-center justify-center text-3xl font-black shadow-xl mb-8 relative">
+              3
+              <div class="absolute -bottom-2 -right-2 bg-white p-2 rounded-full shadow-md">
+                <mat-icon class="text-brand-orange">local_shipping</mat-icon>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Print & Deliver</h3>
+            <p class="text-gray-600">
+              We print your order using high-quality materials and deliver it right to your doorstep anywhere in India.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-24 bg-white p-12 rounded-[3rem] shadow-xl text-center border-2 border-brand-yellow">
+          <h2 class="text-3xl font-black mb-6">Why WhatsApp Ordering?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
+            <div class="flex gap-4">
+              <div class="bg-green-100 p-3 rounded-full h-fit">
+                <mat-icon class="text-green-600">no_accounts</mat-icon>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">No Login Required</h4>
+                <p class="text-sm text-gray-500">Save time! No need to create accounts or remember passwords.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-green-100 p-3 rounded-full h-fit">
+                <mat-icon class="text-green-600">support_agent</mat-icon>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Direct Human Support</h4>
+                <p class="text-sm text-gray-500">Talk to a real person who understands your design needs.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-green-100 p-3 rounded-full h-fit">
+                <mat-icon class="text-green-600">bolt</mat-icon>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Quick Ordering</h4>
+                <p class="text-sm text-gray-500">Place your order in less than 2 minutes via chat.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-green-100 p-3 rounded-full h-fit">
+                <mat-icon class="text-green-600">image</mat-icon>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Easy Design Sharing</h4>
+                <p class="text-sm text-gray-500">Just attach your photos or logos directly in the WhatsApp chat.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12">
+            <a
+              href="https://wa.me/916304895538?text=Hello%20Printora%20India%2C%20I%20want%20to%20start%20my%20order."
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-brand-orange text-white px-10 py-5 rounded-full text-xl font-black hover:scale-105 transition-transform shadow-xl"
+            >
+              <mat-icon>chat</mat-icon> Start Ordering Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `,
+})
+export class HowItWorks {}
