@@ -1,103 +1,87 @@
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h1 class="text-5xl font-black text-brand-black mb-6">Contact Us</h1>
-      <p class="text-xl text-gray-600">Have questions? We're here to help you create something amazing.</p>
-    </div>
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h1 class="text-4xl font-bold text-center mb-2">Contact Us</h1>
+    <p class="text-gray-600 text-center mb-12">Have questions? We're here to help you create something amazing.</p>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <!-- Contact Info -->
       <div>
-        <h2 class="text-3xl font-bold text-brand-black mb-8">Get in Touch</h2>
-        <div class="space-y-8">
-          <div class="flex items-start gap-6">
-            <div class="bg-orange-50 p-4 rounded-2xl">
-              <mat-icon class="text-brand-orange">phone</mat-icon>
-            </div>
+        <h2 class="text-2xl font-bold mb-8">Get in Touch</h2>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <mat-icon class="text-orange-500 mt-1">phone</mat-icon>
             <div>
-              <h4 class="font-bold text-lg mb-1">Phone</h4>
+              <h4 class="font-bold mb-1">Phone</h4>
               <p class="text-gray-600">+91 6304895538</p>
             </div>
           </div>
-          <div class="flex items-start gap-6">
-            <div class="bg-orange-50 p-4 rounded-2xl">
-              <mat-icon class="text-brand-orange">chat</mat-icon>
-            </div>
+          <div class="flex items-start gap-4">
+            <mat-icon class="text-orange-500 mt-1">chat</mat-icon>
             <div>
-              <h4 class="font-bold text-lg mb-1">WhatsApp</h4>
+              <h4 class="font-bold mb-1">WhatsApp</h4>
               <p class="text-gray-600">916304895538</p>
-              <a href="https://wa.me/916304895538" target="_blank" class="text-brand-orange font-bold hover:underline">Click to chat</a>
+              <a href="https://wa.me/916304895538" target="_blank" class="text-orange-500 font-bold hover:underline">Click to chat</a>
             </div>
           </div>
-          <div class="flex items-start gap-6">
-            <div class="bg-orange-50 p-4 rounded-2xl">
-              <mat-icon class="text-brand-orange">location_on</mat-icon>
-            </div>
+          <div class="flex items-start gap-4">
+            <mat-icon class="text-orange-500 mt-1">location_on</mat-icon>
             <div>
-              <h4 class="font-bold text-lg mb-1">Service Area</h4>
+              <h4 class="font-bold mb-1">Service Area</h4>
               <p class="text-gray-600">Pan India Delivery. We ship to every corner of India!</p>
             </div>
           </div>
         </div>
 
-        <div class="mt-12 p-8 bg-brand-yellow/20 rounded-3xl border-2 border-brand-yellow/50">
-          <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-            <mat-icon class="text-brand-orange">info</mat-icon> Quick Tip
-          </h3>
-          <p class="text-gray-700">
-            For the fastest response, message us on WhatsApp with your design and quantity. Our team is most active there!
-          </p>
-        </div>
+        <mat-card class="mt-12">
+          <mat-card-content>
+            <h3 class="font-bold mb-2 flex items-center gap-2">
+              <mat-icon class="text-orange-500">info</mat-icon> Quick Tip
+            </h3>
+            <p class="text-gray-700">
+              For the fastest response, message us on WhatsApp with your design and quantity. Our team is most active there!
+            </p>
+          </mat-card-content>
+        </mat-card>
       </div>
 
       <!-- Contact Form -->
-      <div class="bg-gray-50 p-8 md:p-12 rounded-[3rem] shadow-xl">
-        <h2 class="text-3xl font-bold text-brand-black mb-8">Send a Message</h2>
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">
-          <div>
-            <label for="name" class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
-            <input
-              id="name"
-              type="text"
-              formControlName="name"
-              class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-brand-orange focus:outline-none transition-colors"
-              placeholder="Enter your name"
-            />
-          </div>
-          <div>
-            <label for="phone" class="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
-            <input
-              id="phone"
-              type="tel"
-              formControlName="phone"
-              class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-brand-orange focus:outline-none transition-colors"
-              placeholder="Enter your phone number"
-            />
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-bold text-gray-700 mb-2">Message</label>
-            <textarea
-              id="message"
-              formControlName="message"
-              rows="4"
-              class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-brand-orange focus:outline-none transition-colors"
-              placeholder="How can we help you?"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            [disabled]="contactForm.invalid || isSubmitting"
-            class="w-full bg-brand-black text-white py-5 rounded-2xl font-black text-lg hover:bg-brand-orange transition-all disabled:opacity-50 disabled:hover:bg-brand-black"
-          >
-            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
-          </button>
-          @if (submitSuccess) {
-            <p class="text-green-600 font-bold text-center animate-in fade-in duration-300">
-              Message sent successfully! We'll get back to you soon.
-            </p>
-          }
-        </form>
-      </div>
+      <mat-card>
+        <mat-card-content>
+          <h2 class="text-2xl font-bold mb-6">Send a Message</h2>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">
+            <mat-form-field appearance="outline" class="w-full">
+              <mat-label>Full Name</mat-label>
+              <input matInput formControlName="name" placeholder="Enter your name" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-full">
+              <mat-label>Phone Number</mat-label>
+              <input matInput type="tel" formControlName="phone" placeholder="Enter your 10-digit phone" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-full">
+              <mat-label>Message</mat-label>
+              <textarea matInput formControlName="message" rows="4" placeholder="How can we help you?"></textarea>
+            </mat-form-field>
+
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              [disabled]="contactForm.invalid || isSubmitting"
+              class="w-full"
+            >
+              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+            </button>
+
+            @if (submitSuccess) {
+              <p class="text-green-600 font-bold text-center">
+                Message sent successfully! We'll get back to you soon.
+              </p>
+            }
+          </form>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </section>
